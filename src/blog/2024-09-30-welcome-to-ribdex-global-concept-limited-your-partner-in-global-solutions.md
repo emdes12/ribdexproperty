@@ -8,7 +8,8 @@ description: At Ribdex Global Concept Limited, we are excited to announce the
 author: Alawiye Muritala A.
 date: 2024-09-30T22:33:34.853Z
 tags:
-  - post featured
+  - post
+  - featured
 image: /assets/blog/unforgettable-journey.png
 imageAlt: flyer
 ---
