@@ -1,33 +1,155 @@
 ---
-title: Blog - Ribdex Glocal Concept Limited
+title: Ribdex Global Real Estate Service
 layout: 'base.njk'
 logo: "./assets/Group 36.png"
 ---
 
-<section class="hero">
-  <div class="container flow">
-      <div class="hero__content flow">
-        <h1 class="section-title">Welcome to my blog!</h1>
-        <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into, useful resources, and more.</p>
-        <p>Below are some of my favourite articles, or you can go to the blog page to see my most recent posts.</p>
-        <div class="flex-group">
-          <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-          <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-        </div>
-      </div>
-      <div>
-        <img src="//unsplash.it/510" alt="" class="hero__image">
-      </div>
+<!-- Hero Section --!>
+<div class="hero-section">
+  <div class="hero-content">
+    <span class="headline">
+      Discover Your Dream Property Among Thousands
+    </span>
+    <!-- <form
+      id="search-property"
+      method="post"
+      class="search-form"
+    >
+      <input
+        required
+        type="text"
+        name="location"
+        class="location-input"
+        placeholder="Enter your preferred Location"
+      />
+      <select name="property-type" id="property-type" class="property-select">
+        <option value="">Select property type</option>
+        <option value="rent">Rent</option>
+        <option value="house">House</option>
+        <option value="land">Land</option>
+      </select>
+      <button type="submit" class="search-button desktop-search">
+        search
+      </button>
+      <button type="submit" class="search-button mobile-search">
+        search
+      </button>
+    </form> --!>
   </div>
-</section>
+</div>
 
-<section id="featured-articles" class="featured-articles">
+
+<!-- wrapper detail --!>
+<div class="wrapper">
+  <img src="/assets/hosuing.png" alt="Housing Image" class="image">
+  <div class="content">
+    <span class="headl">We Prioritize Your Comfort and Well-being</span>
+    <span class="description">
+      Our commitment to sophisticated urban living is unwavering. We have consistently defined the standard for luxurious and refined residential spaces. Our properties are meticulously designed to not only meet the discerning tastes of modern-day investors but also to create aesthetically pleasing environments that inspire and delight. We understand that investing in a property is not just about financial returns; it's about creating a lifestyle. Our unique and elegant designs are carefully crafted to appeal to both the investor's mind and the resident's heart.
+    </span>
+  </div>
+</div>
+
+
+<div class="property-listing">
+  <!-- residence/house listing -->
+  <div class="container" id="residence">
+    <div class="head-container">
+      <div class="heading">Residence Listing</div>
+      <a href="./property" class="see-all">See all ></a>
+    </div>
+
+    <div class="property-grid">
+      <!-- Property Item -->
+      {%- for post in collections.featurehouse | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="residence">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Land Listing -->
+  <div class="container" id="land">
+    <div class="head-container">
+      <div class="heading">Land Listing</div>
+      <a href="./property" class="see-all">See all ></a>
+    </div>
+
+    <div class="property-grid">
+      <!-- Land Property Item -->
+      {%- for post in collections.featureland | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="land">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Rent Listing -->
+  <div class="container" id="rent">
+    <div class="head-container">
+      <div class="heading">Rent Listing</div>
+      <a href="./property" class="see-all">See all ></a>
+    </div>
+
+    <div class="property-grid">
+      <!-- Rent Property Item -->
+      {%- for post in collections.featurerent | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="rent">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<!-- <section id="featured-articles" class="featured-articles">
   <div class="container flow">
     <h2 class="section-title text-center ">Featured articles</h2>
     <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
     <ul role="list" class="articles__list flow">
 
-      {%- for post in collections.featured | reverse -%}
+      {%- for post in collections.featurefeatured | reverse -%}
       
       <li>
         <article class="snippet">
@@ -40,4 +162,4 @@ logo: "./assets/Group 36.png"
        </li>
       {%- endfor -%}
    </div>
-</section> 
+</section> --!>

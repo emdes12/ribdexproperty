@@ -1,0 +1,43 @@
+--- 
+layout: 'base.njk'
+logo: "../assets/Group 36.png"
+--- 
+
+<article class="main-article">
+<div class="container container--narrow flow">
+  
+  <div class="prop-hero">
+    <h1 class="headline prop-title">
+      {{ title }}
+    </h1>
+    <figure class="main-article__figure">
+      <img src="{{ image }}" alt="{{ imageAlt }}">
+    </figure>
+  </div>
+  
+  <div class="short-info">
+    <div class="video-container">
+      <iframe 
+        width="100%" 
+        height="100%" 
+        src="https://www.youtube.com/embed/{{ video }}" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  <span class="property-location">
+    <img src="/assets/location (2).svg">{{ location }}
+  </span>
+  <div class="property-info">
+    <span class="property-location"><img src="/assets/price.svg"> NGN {{ price }}</span>
+    <span class="property-location"><img src="/assets/bed.svg"> {{ area }}</span>
+  </div>
+  </div>
+    
+  {{ content | safe }}
+  
+</div>
+</article>

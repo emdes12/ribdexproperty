@@ -1,5 +1,5 @@
 {
-    "layout": "article.njk",
+    "layout": "prop.njk",
     "tags": "post",
     "logo": "../assets/Group 36.png"
 }

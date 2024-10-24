@@ -1,0 +1,96 @@
+--- 
+title: Property
+layout: 'base.njk'
+logo: "./assets/Group 36.png"
+--- 
+      
+
+<!-- property listing -->
+<div class="property-listing">
+  <!-- residence/house listing -->
+  <div class="container" id="residence">
+    <div class="heading-center">
+      <div class="heading">Residence Listing</div>
+    </div>
+
+    <div class="property-grid">
+      <!-- Property Item -->
+      {%- for post in collections.house | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="residence">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Land Listing -->
+  <div class="container" id="land">
+    <div class="heading-center">
+      <div class="heading">Land Listing</div>
+    </div>
+
+    <div class="property-grid">
+      <!-- Land Property Item -->
+      {%- for post in collections.land | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="land">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  <!-- Rent Listing -->
+  <div class="container" id="rent">
+    <div class="heading-center">
+      <div class="heading">Rent Listing</div>
+    </div>
+
+    <div class="property-grid">
+      <!-- Rent Property Item -->
+      {%- for post in collections.rent | reverse -%}
+        <div class="property-card">
+          <img src="{{ post.data.image }}" class="property-image" alt="rent">
+          <div class="property-details">
+            <h6 class="property-title">{{ post.data.title }}</h6>
+            <span class="property-location">
+              <img src="/assets/location (2).svg">{{ post.data.location }}
+            </span>
+            <div class="property-info">
+              <span class="property-location"><img src="/assets/price.svg"> NGN {{ post.data.price }}</span>
+              <span class="property-location"><img src="/assets/bed.svg"> {{ post.data.area }}</span>
+            </div>
+            <a href="{{ post.url }}" class="explore-btn">
+              <button type="submit" class="explore-now">Explore Now</button>
+            </a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

@@ -2,21 +2,21 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "public/assets/blog"
-public_folder: "/assets/blog"
+media_folder: "public/assets/property"
+public_folder: "/assets/property"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blog"
+  - name: "property"
+    label: "Property"
+    folder: "src/property"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Location", name: "location", widget: "string" }
+      - { label: "Area", name: "area", widget: "string" }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "featured Image", name: "image", widget: "image" }
-      - { label: "Image Caption", name: "imageAlt", widget: "string" }
+      - { label: "Cover Image", name: "image", widget: "image" }
+      - { label: "Youtube Video Link", name: "video", widget: "string" }
+      - { label: "Price", name: "price", widget: "number" }
       - { label: "Body", name: "body", widget: "markdown" }

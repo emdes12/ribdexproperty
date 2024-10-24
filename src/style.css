@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 :root {
   --fs-300: 0.9375rem;
   --fs-400: 1.0625rem;
@@ -51,6 +54,8 @@ h1,
 h2,
 h3,
 h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -135,6 +140,7 @@ h3 {
 
 strong {
   font-weight: var(--fw-700);
+  display: inline-block;
 }
 
 section,
@@ -274,10 +280,11 @@ section,
     margin-bottom: 3rem;
   }
 
-  .main-article__figure figcaption {
-    margin: 1rem 0;
-    font-size: var(--fs-300);
-    opacity: .9;
+  .main-article__figure img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
   }
 
 /* //////////////////////
@@ -450,4 +457,336 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+
+
+
+
+/* my styles */
+.property-listing {
+  background-color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.heading-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.property-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.property-card {
+  width: 340px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 38.9px -20px rgba(0, 0, 0, 0.25);
+}
+
+.property-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.property-details {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.property-title {
+  font-size: 18px;
+  color: #26921E;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.property-location,
+.property-info {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.property-info {
+  justify-content: space-between;
+}
+
+.explore-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.explore-now {
+  padding: 16px 20px;
+  background-color: #F97316;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.heading, .explore-btn, .property-title {
+  font-family: "Saira Condensed"
+}
+
+.head-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.heading {
+  color: black;
+  font-size: 16px; /* equivalent to 'text-mdbase' in Tailwind */
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 27px;
+}
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 20px; /* equivalent to 'md:text-xl' in Tailwind */
+  }
+}
+
+.see-all {
+  color: #d15a03;
+  font-size: 16px; /* equivalent to 'text-base' in Tailwind */
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .see-all {
+    font-size: 20px; /* equivalent to 'md:text-xl' in Tailwind */
+  }
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0;
+  max-width: 1200px;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.image {
+  width: 100%; /* Adjust the width according to your design */
+}
+
+.content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  gap: 10px;
+}
+
+.headl {
+  color: #d15a03; /* equivalent to 'text-orange-600' */
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 22px;
+  font-family: "Saira Condensed";
+}
+
+.description {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .content {
+    padding-top: 0;
+    gap: 30px;
+  }
+
+  .headl {
+    font-size: 35px;
+    line-height: 40px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+}
+
+
+/* her section styling */
+.hero-section {
+  position: relative;
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  z-index: 8;
+  padding-top: 180px;
+  padding-bottom: 97px;
+  background-color: rgba(18, 85, 5, 0.7); /* equivalent to bg-opacity-70 */
+  background-image: url('/assets/property.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  text-align: center;
+}
+
+.headline {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-family: "Saira Condensed";
+  line-height: 25px;
+}
+
+.search-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.location-input, .property-select {
+  width: 100%;
+  background-color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #125505;
+}
+
+.property-select {
+  width: 100%;
+}
+
+.search-button {
+  padding: 16px;
+  background-color: #d15a03;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.desktop-search {
+  display: none;
+}
+
+.mobile-search {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    padding-top: 240px;
+    padding-bottom: 194px;
+  }
+
+  .headline {
+    font-size: 55px;
+    line-height: 98px;
+    padding-bottom: 30px;
+  }
+
+  .search-form {
+    flex-direction: row;
+  }
+
+  .location-input {
+    width: 680px;
+  }
+
+  .property-select {
+    width: 260px;
+  }
+
+  .desktop-search {
+    display: flex;
+  }
+
+  .mobile-search {
+    display: none;
+  }
+}
+
+
+/* prop page styling */
+
+.prop-hero {
+  position: relative;
+}
+
+.prop-title {
+  position: absolute;
+  bottom: 50px;
+  font-family: "Saira Condensed";
+  left: 30px;
+  text-shadow: 5px 5px 10px black;
+}
+
+
+
+/* short info for youtube and other information about the land */
+.short-info {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-container {
+  width: 100%;
+  max-width: 1000px;
+  height: 204px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .video-container {
+    height: 450px;
+  }
 }
